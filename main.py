@@ -21,6 +21,7 @@ def main():
         or "/output"
     )
     path = os.path.join(out_dir, "entry.txt")
+    os.makedirs(out_dir, exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as f:
         f.write(LINE)
     os.chmod(path, 0o644)
